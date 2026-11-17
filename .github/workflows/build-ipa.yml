@@ -1,0 +1,61 @@
+name: Build Unsigned IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Select latest Xcode
+        run: |
+          XCODE_APP=$(ls -d /Applications/Xcode*.app | sort -V | tail -n 1)
+          echo "Using $XCODE_APP"
+          sudo xcode-select -s "$XCODE_APP/Contents/Developer"
+
+      - name: Clone and build libdxfrw for iOS (arm64)
+        run: |
+          mkdir -p Vendor
+          git clone --depth 1 https://github.com/LibreCAD/libdxfrw.git Vendor/libdxfrw
+          cmake -S Vendor/libdxfrw -B Vendor/libdxfrw/build-ios \
+            -DCMAKE_SYSTEM_NAME=iOS \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=16.0 \
+            -DBUILD_SHARED_LIBS=OFF \
+            -DCMAKE_BUILD_TYPE=Release
+          cmake --build Vendor/libdxfrw/build-ios --config Release -j4
+          LIB_PATH=$(find Vendor/libdxfrw/build-ios -name "libdxfrw*.a" | head -n 1)
+          echo "LIBDXFRW_A=$GITHUB_WORKSPACE/$LIB_PATH" >> $GITHUB_ENV
+
+      - name: Build unsigned iOS app with native DWG support
+        run: |
+          xcodebuild -project CADFastView.xcodeproj \
+            -scheme CADFastView \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            GCC_PREPROCESSOR_DEFINITIONS='$(inherited) USE_LIBDXFRW=1' \
+            OTHER_SWIFT_FLAGS='$(inherited) -DUSE_LIBDXFRW' \
+            HEADER_SEARCH_PATHS='$(inherited) $(SRCROOT)/Vendor/libdxfrw/src' \
+            OTHER_LDFLAGS='$(inherited) '"$LIBDXFRW_A"' -lc++ -liconv' \
+            build
+
+      - name: Package unsigned IPA
+        run: |
+          mkdir -p Payload
+          cp -r build/Build/Products/Release-iphoneos/CADFastView.app Payload/
+          zip -qry CADFastView.ipa Payload
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CADFastView-unsigned-ipa
+          path: CADFastView.ipa
