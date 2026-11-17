@@ -1,0 +1,257 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33304C2CE66B4577A3519639 /* CADFastViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E30A6FB20E49D6A658BCDD /* CADFastViewApp.swift */; };
+		295DF314532046E9902739F4 /* CADModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAED25C98AC4CCAA5DCA595 /* CADModels.swift */; };
+		54C73945A82B418BB0A87344 /* FallbackDXFParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD6DAA08CD4E3FAD2F9DD0 /* FallbackDXFParser.swift */; };
+		E37A50561F9A44BE8CB3793C /* CADParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7E48F037444C8FDD4D15 /* CADParserService.swift */; };
+		9877708286084DF9BE785F6E /* CADParserBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 050AE2C5DFD34F83AC7F5938 /* CADParserBridge.mm */; };
+		07E2800411ED41A38208165F /* CADViewportMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A10A24CFD4360A0A7DFC2 /* CADViewportMath.swift */; };
+		A53DEE87A9EF461582C0CA88 /* CADCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9CADDEDCB54853ACA07A14 /* CADCanvasView.swift */; };
+		7811397122DF4E6CBEDFDD19 /* LayerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE3C1F4FCF4589B8C5E4A5 /* LayerSheetView.swift */; };
+		CBDF10C787C74243A6544E23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF423D317774CB1973C4D18 /* ContentView.swift */; };
+		262845BC3C79402B847F74A4 /* CADPDFExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F230855A677A477789738448 /* CADPDFExporter.swift */; };
+		CD75E4FD15EF43D6B457B3D5 /* SampleSurvey.dxf in Resources */ = {isa = PBXBuildFile; fileRef = 93B2A8BDAE1A40BCA9C03C5A /* SampleSurvey.dxf */; };
+		CD0A96AAF9B7490A95220DFE /* SecurityHardener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA39C4F0FF4DACAE077A4A /* SecurityHardener.swift */; };
+		A7550A4FD3434ABFADE33B0E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 80AB5319271843B0A0D8DCF4 /* PrivacyInfo.xcprivacy */; };
+		3CE80EC82AA04720BE61A994 /* CADSpatialIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9568472BE46F48B5B47B8 /* CADSpatialIndex.swift */; };
+		A98B7A1699564EDBAA257E39 /* CADDXFExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEED899264E4A5A865B75A5 /* CADDXFExporter.swift */; };
+		2998108FCC5B47CCAA1B8FCD /* STEPAndIFCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BD68ADDFF47ACB21353BA /* STEPAndIFCParser.swift */; };
+		A149CB0A58CC4E25A1C2D4FF /* CAD3DViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CAA1CC20A64BBCAF3426AB /* CAD3DViewerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		36514E6D587F4E2E8BE2E6C6 /* CADFastView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CADFastView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E30A6FB20E49D6A658BCDD /* CADFastViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADFastViewApp.swift"; path = "Sources/App/CADFastViewApp.swift"; sourceTree = "<group>"; };
+		BBAED25C98AC4CCAA5DCA595 /* CADModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADModels.swift"; path = "Sources/Models/CADModels.swift"; sourceTree = "<group>"; };
+		7FAD6DAA08CD4E3FAD2F9DD0 /* FallbackDXFParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FallbackDXFParser.swift"; path = "Sources/CADEngine/FallbackDXFParser.swift"; sourceTree = "<group>"; };
+		99DB7E48F037444C8FDD4D15 /* CADParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADParserService.swift"; path = "Sources/CADEngine/CADParserService.swift"; sourceTree = "<group>"; };
+		128E57C4EEA74821822DBAD8 /* CADParserBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CADParserBridge.h"; path = "Sources/Bridge/CADParserBridge.h"; sourceTree = "<group>"; };
+		E3E731B0D98847EB9E562F15 /* CADFastView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CADFastView-Bridging-Header.h"; path = "Sources/Bridge/CADFastView-Bridging-Header.h"; sourceTree = "<group>"; };
+		050AE2C5DFD34F83AC7F5938 /* CADParserBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = "CADParserBridge.mm"; path = "Sources/Bridge/CADParserBridge.mm"; sourceTree = "<group>"; };
+		CF8A10A24CFD4360A0A7DFC2 /* CADViewportMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADViewportMath.swift"; path = "Sources/Viewport/CADViewportMath.swift"; sourceTree = "<group>"; };
+		FF9CADDEDCB54853ACA07A14 /* CADCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADCanvasView.swift"; path = "Sources/Viewport/CADCanvasView.swift"; sourceTree = "<group>"; };
+		E0CE3C1F4FCF4589B8C5E4A5 /* LayerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LayerSheetView.swift"; path = "Sources/Views/LayerSheetView.swift"; sourceTree = "<group>"; };
+		6AF423D317774CB1973C4D18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ContentView.swift"; path = "Sources/Views/ContentView.swift"; sourceTree = "<group>"; };
+		F230855A677A477789738448 /* CADPDFExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADPDFExporter.swift"; path = "Sources/Export/CADPDFExporter.swift"; sourceTree = "<group>"; };
+		34B10CE94C594605865090D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Resources/Info.plist"; sourceTree = "<group>"; };
+		93B2A8BDAE1A40BCA9C03C5A /* SampleSurvey.dxf */ = {isa = PBXFileReference; lastKnownFileType = text; name = "SampleSurvey.dxf"; path = "Resources/SampleSurvey.dxf"; sourceTree = "<group>"; };
+		E7CA39C4F0FF4DACAE077A4A /* SecurityHardener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SecurityHardener.swift"; path = "Sources/Security/SecurityHardener.swift"; sourceTree = "<group>"; };
+		80AB5319271843B0A0D8DCF4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "PrivacyInfo.xcprivacy"; path = "Resources/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		FBC9568472BE46F48B5B47B8 /* CADSpatialIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADSpatialIndex.swift"; path = "Sources/Viewport/CADSpatialIndex.swift"; sourceTree = "<group>"; };
+		5BEED899264E4A5A865B75A5 /* CADDXFExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CADDXFExporter.swift"; path = "Sources/Export/CADDXFExporter.swift"; sourceTree = "<group>"; };
+		2F8BD68ADDFF47ACB21353BA /* STEPAndIFCParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "STEPAndIFCParser.swift"; path = "Sources/CAD3D/STEPAndIFCParser.swift"; sourceTree = "<group>"; };
+		D6CAA1CC20A64BBCAF3426AB /* CAD3DViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CAD3DViewerView.swift"; path = "Sources/CAD3D/CAD3DViewerView.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		693FABFF680C4CD09C9FA51B = {
+			isa = PBXGroup;
+			children = (
+				A24F6F1737364412BC17969F /* Sources */,
+				C4B350846290445BA78B03FA /* Resources */,
+				C3D76B0BEA3F4172A4887AEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A24F6F1737364412BC17969F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F1E30A6FB20E49D6A658BCDD /* CADFastViewApp.swift */,
+				E7CA39C4F0FF4DACAE077A4A /* SecurityHardener.swift */,
+				BBAED25C98AC4CCAA5DCA595 /* CADModels.swift */,
+				7FAD6DAA08CD4E3FAD2F9DD0 /* FallbackDXFParser.swift */,
+				99DB7E48F037444C8FDD4D15 /* CADParserService.swift */,
+				128E57C4EEA74821822DBAD8 /* CADParserBridge.h */,
+				E3E731B0D98847EB9E562F15 /* CADFastView-Bridging-Header.h */,
+				050AE2C5DFD34F83AC7F5938 /* CADParserBridge.mm */,
+				CF8A10A24CFD4360A0A7DFC2 /* CADViewportMath.swift */,
+				FF9CADDEDCB54853ACA07A14 /* CADCanvasView.swift */,
+				D6CAA1CC20A64BBCAF3426AB /* CAD3DViewerView.swift */,
+				2F8BD68ADDFF47ACB21353BA /* STEPAndIFCParser.swift */,
+				5BEED899264E4A5A865B75A5 /* CADDXFExporter.swift */,
+				FBC9568472BE46F48B5B47B8 /* CADSpatialIndex.swift */,
+				E0CE3C1F4FCF4589B8C5E4A5 /* LayerSheetView.swift */,
+				6AF423D317774CB1973C4D18 /* ContentView.swift */,
+				F230855A677A477789738448 /* CADPDFExporter.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		C4B350846290445BA78B03FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34B10CE94C594605865090D2 /* Info.plist */,
+				93B2A8BDAE1A40BCA9C03C5A /* SampleSurvey.dxf */,
+				80AB5319271843B0A0D8DCF4 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C3D76B0BEA3F4172A4887AEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36514E6D587F4E2E8BE2E6C6 /* CADFastView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39B4557CADC04ADBBF7AF5E2 /* CADFastView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D91F690239BD4ACDB6A02F3E /* Build configuration list for PBXNativeTarget "CADFastView" */;
+			buildPhases = (
+				C8995A30CBA04CCCAA9188B2 /* Sources */,
+				24CCC1770EB84F1089766FDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CADFastView;
+			productName = CADFastView;
+			productReference = 36514E6D587F4E2E8BE2E6C6 /* CADFastView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		912FD0F924E146A683AFC211 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+			};
+			buildConfigurationList = 601A8A49BBF14D5DBAE24A11 /* Build configuration list for PBXProject "CADFastView" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 693FABFF680C4CD09C9FA51B;
+			productRefGroup = C3D76B0BEA3F4172A4887AEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39B4557CADC04ADBBF7AF5E2 /* CADFastView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24CCC1770EB84F1089766FDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD75E4FD15EF43D6B457B3D5 /* SampleSurvey.dxf in Resources */,
+				A7550A4FD3434ABFADE33B0E /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8995A30CBA04CCCAA9188B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33304C2CE66B4577A3519639 /* CADFastViewApp.swift in Sources */,
+				CD0A96AAF9B7490A95220DFE /* SecurityHardener.swift in Sources */,
+				295DF314532046E9902739F4 /* CADModels.swift in Sources */,
+				54C73945A82B418BB0A87344 /* FallbackDXFParser.swift in Sources */,
+				E37A50561F9A44BE8CB3793C /* CADParserService.swift in Sources */,
+				9877708286084DF9BE785F6E /* CADParserBridge.mm in Sources */,
+				07E2800411ED41A38208165F /* CADViewportMath.swift in Sources */,
+				A53DEE87A9EF461582C0CA88 /* CADCanvasView.swift in Sources */,
+				A149CB0A58CC4E25A1C2D4FF /* CAD3DViewerView.swift in Sources */,
+				2998108FCC5B47CCAA1B8FCD /* STEPAndIFCParser.swift in Sources */,
+				A98B7A1699564EDBAA257E39 /* CADDXFExporter.swift in Sources */,
+				3CE80EC82AA04720BE61A994 /* CADSpatialIndex.swift in Sources */,
+				7811397122DF4E6CBEDFDD19 /* LayerSheetView.swift in Sources */,
+				CBDF10C787C74243A6544E23 /* ContentView.swift in Sources */,
+				262845BC3C79402B847F74A4 /* CADPDFExporter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		10E0B2E80934445494EE7128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5FB8D2D9BC594D4F8737DDA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EDBE38A2B4954298854389F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Resources/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.cadfastview.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Bridge/CADFastView-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4321EF56238F47CDA18F1104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Resources/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.cadfastview.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Bridge/CADFastView-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		601A8A49BBF14D5DBAE24A11 /* Build configuration list for PBXProject "CADFastView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E0B2E80934445494EE7128 /* Debug */,
+				5FB8D2D9BC594D4F8737DDA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D91F690239BD4ACDB6A02F3E /* Build configuration list for PBXNativeTarget "CADFastView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDBE38A2B4954298854389F3 /* Debug */,
+				4321EF56238F47CDA18F1104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 912FD0F924E146A683AFC211 /* Project object */;
+}

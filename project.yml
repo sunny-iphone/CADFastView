@@ -1,0 +1,22 @@
+name: CADFastView
+options:
+  bundleIdPrefix: com.local.cadfastview
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  CADFastView:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: Resources/Info.plist
+        SWIFT_OBJC_BRIDGING_HEADER: Sources/Bridge/CADFastView-Bridging-Header.h
+        CLANG_CXX_LANGUAGE_STANDARD: c++17
+        PRODUCT_BUNDLE_IDENTIFIER: com.local.cadfastview.app
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
